@@ -22,7 +22,7 @@ El dataset original Starbucks Customer Survey se puede obtener de la URL [https:
 * **ocupacion**: de tipo Enum, indica el tipo de ocupacion del cliente, siendo Student, Employed o Self_Employed.
 * **servicio**: de tipo String, indica si el pedido se realizó para tomar o para llevar.
 * **duracion**: de tipo Integer, contiene la duración en minutos del pedido
-* **valoracion**: de tipo Double, tiene la puntuación dada por cada cliente.
+* **valoracion**: de tipo Double, tiene la puntuación del pedido que ha dado cada cliente.
 * **pedido**: de tipo List<String>, contiene una lista con los articulos pedidos. Los pedidos están separados por ;.
 * **conocidoPor**: de tipo cadena, indica la forma en la que el cliente conoció el establecimiento.
 * **satisfecho**: de tipo Boolean. Indica si el cliente quedó satisfecho con el pedido.
@@ -48,7 +48,7 @@ Representa un pedido en Starbucks.
 - _satisfecho_, de tipo _Boolean_, consultable y modificable. Indica si el cliente está satisfecho o no(false).
 - _idCliente_, de tipo _Integer_, consultable y modificable. Es el identificador del cliente.
 - _pedidoCliente_, de tipo _String_, propiedad derivada. Indica el pedido que ha realizado un cliente con determinado id.
-
+- _añoNacimiento_, de tipo _Integer_, propiedad derivada. Indica el año de nacimiento del cliente que realizó el pedido.
 
 **Constructores**: 
 
@@ -66,13 +66,11 @@ Representa un pedido en Starbucks.
 
 **Criterio de ordenación**: el pedido con mayor valoracion es mejor.
 
-**Otras operaciones**:
 
-- _String getMovimiento(Integer numMovimiento)_: Devuelve el movimiento dado por el número numMovimiento. Eleva ```IllegalArgumentException``` si ```numMovimiento``` no está en el intervalo [1, getNumMovimientos()]
 
 #### Tipos auxiliares
 
 - Genero, enumerado. Puede tomar los valores Male, Female.
 - Ocupacion, enumerado. Puede tomar los valores Student, Employed, Self_Employed.
 * **fp.common**:
-- Cliente: Record que actua como tipo auxiliar, contiene un metodo getAñoNacimiento() que nos permite calcular el año de nacimineto del cliente a partir de la fecha del pedido y de la edad del cliente.
+- Cliente: Record que actua como tipo auxiliar, contiene un metodo getAñoNacimiento() que nos permite calcular el año de nacimiento del cliente a partir de la fecha del pedido y de la edad del cliente.

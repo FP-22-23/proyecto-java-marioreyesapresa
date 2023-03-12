@@ -4,6 +4,9 @@ package fp.starbucks;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Objects;
+
+import fp.common.Genero;
+import fp.common.Ocupacion;
 import fp.utiles.Checkers;
 
 /**
@@ -45,7 +48,6 @@ public class Starbucks {
 			this.duracion = duracion;
 			Checkers.check("La valoracion debe tener valores comprendidos entre 0.0 y 5.0", 
 					valoracion >= 0.0 && valoracion <= 5.0);
-			
 			this.valoracion = valoracion;
 			this.pedido = pedido;
 			this.conocidoPor = conocidoPor;
@@ -54,12 +56,10 @@ public class Starbucks {
 		}
 	
 		
-	//Constructor 2: devuelve la fecha y hora, el servicio, el pedido y el id, todos los demás datos los devuelve null.
+	//Constructor 2: devuelve la fecha y hora, el servicio, la valoracion, el pedido y el id, todos los demás datos los devuelve null.
 		
 		public Starbucks(LocalDateTime fechaHora, String servicio,Double valoracion,List<String> pedido, Integer idCliente) {
 		
-			
-			
 			Checkers.check("La fecha de pedido tiene que ser menor que la fecha actual", 
 					fechaHora.isBefore(LocalDateTime.now()));
 			this.fechaHora = fechaHora;
@@ -71,7 +71,7 @@ public class Starbucks {
 			this.valoracion = valoracion;
 			this.pedido = pedido;
 			this.conocidoPor = null;
-			this.satisfecho = null; //revisar
+			this.satisfecho = null; 
 			this.idCliente=idCliente;
 		}
 
@@ -81,8 +81,8 @@ public class Starbucks {
 		 * @param edad Indica la edad del cliente.
 		 * @param ocupacion Indica si el cliente es un Estudiante o un Empleado.
 		 * @param servicio Indica si se solicita el pedido para tomar o para llevar.
-		 * @param duracion Indica el timepo, en minutos, que se tarda en entregar el pedido.
-		 * @param valoracion Rating del jugador con las negras
+		 * @param duracion Indica el tiempo, en minutos, que se tarda en entregar el pedido.
+		 * @param valoracion Rating del pedido.
 		 * @param pedido Cadena que contiene la lista de pedidos.
 		 * @param conocidoPor Cadena que indica por qué medio(como por ejemplo una red social)se ha conocido el establecimiento
 		 * @param satisfecho Indica si el cliente está satisfecho (true) o no
@@ -206,13 +206,12 @@ public class Starbucks {
 		//propiedad derivada
 		//Propiedad Derivada: devuelve el pedido del cliente.
 	
-
 		/**
 		 * @return El pedido que realiza un determinado cliente
 		 */
 		public String pedidoCliente() {
 			
-			return "El cliente con id: " + getIdCliente() + " ha pedido " + getPedido();
+			return "El cliente con id = " + getIdCliente() + " que ha pedido " + getPedido() + " ¿está satisfecho? "+getSatisfecho();
 			
 		}
 
@@ -245,9 +244,7 @@ public class Starbucks {
 					&& Objects.equals(valoracion, other.valoracion);
 		}
 		
-		//Criterio de orden natural
-		//CompareTo: el pedido con mayor valoracion es mejor.
-		
+		//Criterio de orden natural		
 		/**
 		 * @return el pedido con mayor valoracion es mejor.
 		 */

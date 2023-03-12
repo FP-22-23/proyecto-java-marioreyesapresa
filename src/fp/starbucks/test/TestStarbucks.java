@@ -4,10 +4,10 @@ package fp.starbucks.test;
 import java.time.LocalDateTime;
 import java.util.List;
 
-import fp.starbucks.Genero;
-import fp.starbucks.Ocupacion;
 import fp.starbucks.Starbucks;
 import fp.common.Cliente;
+import fp.common.Genero;
+import fp.common.Ocupacion;
 
 public class TestStarbucks {
 	
@@ -62,9 +62,7 @@ public class TestStarbucks {
 	
 	public static void main(String[] args) {
 		
-		
 		System.out.println("####################    ENTREGA 1    ####################\n");
-		
 		System.out.println("\n~~~~~~~~~~~~~~~~~~~    OBJETO 1 (CONSTRUCTOR 1)    ~~~~~~~~~~~~~~~~~~~\n");
 		
 		List<String> pedido = List.of("Cold drinks","Pastries");
@@ -103,11 +101,15 @@ public class TestStarbucks {
 		
 
 		System.out.println("================================================================================");
-		System.out.println("\n________  PROPIEDAD DERIVADA ________\n");
+		System.out.println("\n________  PROPIEDAD DERIVADA: pedidoCliente ________\n");
 		
 		System.out.println("Objeto 1: " + a1.pedidoCliente() );
 		System.out.println("Objeto 2: " + a2.pedidoCliente() );
 		
+		System.out.println("\n________  PROPIEDAD DERIVADA: añoNacimiento ________\n");
+		Cliente c = new Cliente(LocalDateTime.now(), 14);
+		System.out.println("El cliente nació en el año "+c.getAñoNacimiento(c));
+
 
 		System.out.println("================================================================================");
 		System.out.println("\n________  TO STRING  ________\n");
@@ -137,11 +139,7 @@ public class TestStarbucks {
 		}
 		
 
-		System.out.println("================================================================================");
-		System.out.println("\n________  PROPIEDAD AUXILIAR ________\n");
-		Cliente c = new Cliente(LocalDateTime.now(), 14);
-		System.out.println("El cliente nació en el año "+c.getAñoNacimiento(c));
-
+	
 	}
 
 }

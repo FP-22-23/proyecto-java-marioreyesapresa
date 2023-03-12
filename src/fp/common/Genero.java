@@ -1,4 +1,4 @@
-package fp.starbucks;
+package fp.common;
 
 public enum Genero {
 Female, Male
