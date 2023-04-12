@@ -2,12 +2,16 @@ package fp.starbucks;
 
 
 import java.time.LocalDateTime;
+
 import java.util.List;
 import java.util.Objects;
+
+
 
 import fp.common.Genero;
 import fp.common.Ocupacion;
 import fp.utiles.Checkers;
+
 
 /**
  * @author marreyapr
@@ -24,7 +28,6 @@ public class Starbucks {
 	private Integer duracion;
 	private Double valoracion;
 	private List<String> pedido;
-	private String conocidoPor;
 	private Boolean satisfecho;
 	private Integer idCliente;
 	
@@ -33,7 +36,7 @@ public class Starbucks {
 	
 
 		public Starbucks(LocalDateTime fechaHora, Genero genero, Integer edad, Ocupacion ocupacion, String servicio,
-				Integer duracion, Double valoracion, List<String> pedido, String conocidoPor, Boolean satisfecho, Integer idCliente) {
+				Integer duracion, Double valoracion, List<String> pedido, Boolean satisfecho, Integer idCliente) {
 			
 			
 			Checkers.check("La fecha de pedido tiene que ser menor que la fecha actual", 
@@ -50,7 +53,6 @@ public class Starbucks {
 					valoracion >= 0.0 && valoracion <= 5.0);
 			this.valoracion = valoracion;
 			this.pedido = pedido;
-			this.conocidoPor = conocidoPor;
 			this.satisfecho = satisfecho;
 			this.idCliente=idCliente;
 		}
@@ -70,7 +72,6 @@ public class Starbucks {
 			this.duracion = null;
 			this.valoracion = valoracion;
 			this.pedido = pedido;
-			this.conocidoPor = null;
 			this.satisfecho = null; 
 			this.idCliente=idCliente;
 		}
@@ -84,14 +85,15 @@ public class Starbucks {
 		 * @param duracion Indica el tiempo, en minutos, que se tarda en entregar el pedido.
 		 * @param valoracion Rating del pedido.
 		 * @param pedido Cadena que contiene la lista de pedidos.
-		 * @param conocidoPor Cadena que indica por qué medio(como por ejemplo una red social)se ha conocido el establecimiento
 		 * @param satisfecho Indica si el cliente está satisfecho (true) o no
 		 * @param idCliente Identificador del cliente.
 		 * @throws IllegalArgumentException si la fecha de pedido es mayor que la fecha actual
 		 * @throws IllegalArgumentException si la valoracion no tiene valores comprendidos entre 0.0 y 5.0
 		 * @throws IllegalArgumentException si la duración supera los 60min y o no es mayor que 0min
 		 */
-	
+		
+		
+
 	//todas las propiedades son consultables y modificables
 		
 
@@ -175,14 +177,6 @@ public class Starbucks {
 		}
 
 
-		public String getConocidoPor() {
-			return conocidoPor;
-		}
-
-
-		public void setConocidoPor(String conocidoPor) {
-			this.conocidoPor = conocidoPor;
-		}
 
 
 		public Boolean getSatisfecho() {
@@ -222,7 +216,7 @@ public class Starbucks {
 		public String toString() {
 			return "Starbucks [fechaHora=" + fechaHora + ", genero=" + genero + ", edad=" + edad + ", ocupacion="
 					+ ocupacion + ", servicio=" + servicio + ", duracion=" + duracion + ", valoracion="
-					+ valoracion + ", pedido=" + pedido + ", conocidoPor=" + conocidoPor + ", satisfecho=" + satisfecho
+					+ valoracion + ", pedido=" + pedido + ", satisfecho=" + satisfecho
 					+ ", idCliente=" + idCliente + "]";
 		}
 		
@@ -236,7 +230,7 @@ public class Starbucks {
 			if (getClass() != obj.getClass())
 				return false;
 			Starbucks other = (Starbucks) obj;
-			return Objects.equals(conocidoPor, other.conocidoPor) && Objects.equals(edad, other.edad)
+			return  Objects.equals(edad, other.edad)
 					&& Objects.equals(fechaHora, other.fechaHora) && genero == other.genero
 					&& Objects.equals(idCliente, other.idCliente) && ocupacion == other.ocupacion
 					&& Objects.equals(pedido, other.pedido) && Objects.equals(satisfecho, other.satisfecho)

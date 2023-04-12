@@ -1,50 +1,50 @@
-fechaHora;genero;edad;ocupacion;servicio;duracion;valoracion;pedido;conocidoPor;satisfecho;idCliente
-1/10/19 12:38;Female;23;Student;Dine in;35;0.5;Coffee;"Starbucks Website/Apps;Social Media;Emails;Deal sites (fave, iprice, etc...)";Yes;1
-1/10/19 12:38;Female;19;Student;Take away;5;4.1;"Cold drinks;Pastries";"Social Media;In Store displays";Yes;2
-1/10/19 12:38;Male;26;Employed;Dine in;6;0.7;Coffee;"In Store displays;Billboards";Yes;3
-1/10/19 12:39;Female;5;Student;Take away;23;1.4;Coffee;Through friends and word of mouth;No;4
-1/10/19 12:39;Male;14;Student;Take away;38;1.7;"Coffee;Sandwiches";"Starbucks Website/Apps;Social Media";Yes;5
-1/10/19 12:39;Female;33;Student;Dine in;32;3.3;Cold drinks;Social Media;Yes;6
-1/10/19 12:39;Female;40;Student;Dine in;29;2.4;Coffee;"Starbucks Website/Apps;Social Media";Yes;7
-1/10/19 12:40;Male;55;Employed;Dine in;6;3.5;"Coffee;Cold drinks";"Starbucks Website/Apps;Social Media;Emails;Through friends and word of mouth";Yes;8
-2/10/19 12:42;Female;29;Student;Drive-thru;15;4.1;Cold drinks;"Starbucks Website/Apps;Social Media;Through friends and word of mouth";Yes;9
-2/10/19 12:43;Male;21;Employed;Take away;32;3.2;Coffee;"Social Media;Through friends and word of mouth";Yes;10
-2/10/19 12:47;Female;12;Student;Dine in;6;0.3;Cold drinks;Social Media;Yes;11
-2/10/19 12:48;Female;7;Student;Dine in;38;3.0;Coffee;"Starbucks Website/Apps;Social Media;Through friends and word of mouth";No;12
-2/10/19 12:49;Female;31;Student;Take away;23;4.1;"Coffee;Sandwiches";Social Media;Yes;13
-2/10/19 12:53;Female;18;Student;Take away;23;3.6;Coffee;Social Media;Yes;14
-2/10/19 12:53;Female;45;Student;Take away;10;0.3;Coffee;"Social Media;Through friends and word of mouth;In Store displays";No;15
-3/10/19 12:57;Female;23;Employed;Take away;15;4.6;Coffee;Starbucks Website/Apps;No;16
-3/10/19 12:59;Male;52;Employed;Drive-thru;24;0.5;Coffee;Social Media;Yes;17
-3/10/19 1:08;Male;69;Employed;Dine in;8;0.6;Coffee;"Social Media;Through friends and word of mouth";Yes;18
-3/10/19 1:09;Male;19;Employed;Take away;39;3.3;Coffee;"Starbucks Website/Apps;Social Media;Emails;Through friends and word of mouth";Yes;19
-3/10/19 1:13;Female;42;Self_employed;Take away;9;1.1;Cold drinks;Emails;Yes;20
-3/10/19 1:13;Male;50;Employed;Take away;13;0.4;Coffee;"Social Media;Emails";No;21
-3/10/19 1:14;Female;29;Employed;Dine in;15;3.4;Coffee;Social Media;Yes;22
-3/10/19 1:21;Male;23;Employed;Dine in;32;2.8;Coffee;Through friends and word of mouth;No;23
-3/10/19 1:24;Female;18;Student;Drive-thru;16;0.1;"Cold drinks;Pastries;Sandwiches";"Social Media;Through friends and word of mouth";Yes;24
-4/10/19 1:24;Male;43;Self_employed;Dine in;27;5.0;"Coffee;Juices;Pastries;Sandwiches";"Through friends and word of mouth;In Store displays";Yes;25
-4/10/19 1:25;Male;34;Employed;Dine in;24;4.3;"Coffee;Cold drinks";"Social Media;In Store displays;Billboards";Yes;26
-4/10/19 1:29;Male;27;Employed;Drive-thru;7;2.8;Coffee;Application offer;No;27
-4/10/19 1:33;Male;19;Self_employed;Take away;6;4.1;Coffee;Social Media;Yes;28
-4/10/19 1:34;Male;21;Self_employed;Drive-thru;18;1.2;Coffee;"Starbucks Website/Apps;Social Media;Through friends and word of mouth;In Store displays";Yes;29
-4/10/19 1:37;Female;20;Employed;Dine in;6;1.7;Coffee;"Starbucks Website/Apps;Social Media;Emails;Through friends and word of mouth";Yes;30
-7/10/19 1:39;Female;45;Employed;Take away;7;2.5;"Coffee;Pastries;Sandwiches";"Starbucks Website/Apps;Social Media;Emails;Through friends and word of mouth";Yes;31
-7/10/19 1:40;Female;25;Employed;Drive-thru;18;0.5;"Coffee;Pastries";In Store displays;Yes;32
-7/10/19 1:45;Female;43;Employed;Take away;19;3.7;Coffee;Social Media;Yes;33
-7/10/19 1:45;Female;28;Employed;Dine in;19;3.2;Coffee;Social Media;No;34
-7/10/19 1:51;Female;21;Employed;Take away;30;4.4;Coffee;"Social Media;Through friends and word of mouth;Billboards";Yes;35
-7/10/19 1:51;Female;15;Student;Take away;2;0.3;Coffee;Social Media;No;36
-7/10/19 1:53;Female;55;Self_employed;Take away;12;3.0;Cold drinks;Social Media;Yes;37
-8/10/19 1:55;Male;5;Student;Dine in;38;3.4;Coffee;"Starbucks Website/Apps;Social Media";Yes;38
-8/10/19 1:57;Male;20;Employed;Take away;33;2.1;"Cold drinks;Juices;Pastries";In Store displays;Yes;39
-8/10/19 2:00;Male;19;Employed;Take away;3;0.6;Coffee;"Starbucks Website/Apps;Social Media";Yes;40
-8/10/19 2:03;Female;61;Employed;Take away;19;1.2;Coffee;Social Media;Yes;41
-8/10/19 2:06;Male;34;Employed;Dine in;14;0.8;Coffee;"Starbucks Website/Apps;Social Media";Yes;42
-8/10/19 2:27;Female;27;Employed;Dine in;4;4.1;Coffee;Social Media;Yes;43
-8/10/19 2:35;Female;58;Employed;Take away;15;4.8;"Coffee;Pastries";"Starbucks Website/Apps;Social Media;Emails;Billboards";Yes;44
-9/10/19 2:41;Female;14;Student;never;37;1.4;Coffee;Social Media;Yes;45
-9/10/19 2:41;Female;18;Student;Take away;40;1.8;"Coffee;Pastries";Social Media;Yes;46
-9/10/19 2:41;Female;27;Student;Dine in;6;0.5;Cold drinks;Through friends and word of mouth;Yes;47
-9/10/19 2:42;Female;23;Self_employed;Take away;20;3.2;Coffee;"Social Media;Emails;Deal sites (fave, iprice, etc...);Through friends and word of mouth;In Store displays;Billboards";Yes;48
-9/10/19 2:45;Female;18;Employed;Take away;5;2.3;Cold drinks;"Social Media;Through friends and word of mouth";Yes;49
+fechaHora;genero;edad;ocupacion;servicio;duracion;valoracion;pedido;satisfecho;idCliente
+1/10/19 12:38;Female;23;Student;Dine in;35;0.5;Coffee;Yes;1
+1/10/19 12:38;Female;19;Student;Take away;5;4.1;Cold drinks,Pastries;Yes;2
+1/10/19 12:38;Male;26;Employed;Dine in;6;0.7;Coffee;Yes;3
+1/10/19 12:39;Female;5;Student;Take away;23;1.4;Coffee;No;4
+1/10/19 12:39;Male;14;Student;Take away;38;1.7;Coffee,Sandwiches;Yes;5
+1/10/19 12:39;Female;33;Student;Dine in;32;3.3;Cold drinks;Yes;6
+1/10/19 12:39;Female;40;Student;Dine in;29;2.4;Coffee;Yes;7
+1/10/19 12:40;Male;55;Employed;Dine in;6;3.5;Coffee,Cold drinks;Yes;8
+2/10/19 12:42;Female;29;Student;Drive-thru;15;4.1;Cold drinks;Yes;9
+2/10/19 12:43;Male;21;Employed;Take away;32;3.2;Coffee;Yes;10
+2/10/19 12:47;Female;12;Student;Dine in;6;0.3;Cold drinks;Yes;11
+2/10/19 12:48;Female;7;Student;Dine in;38;3.0;Coffee;No;12
+2/10/19 12:49;Female;31;Student;Take away;23;4.1;Coffee,Sandwiches;Yes;13
+2/10/19 12:53;Female;18;Student;Take away;23;3.6;Coffee;Yes;14
+2/10/19 12:53;Female;45;Student;Take away;10;0.3;Coffee;No;15
+3/10/19 12:57;Female;23;Employed;Take away;15;4.6;Coffee;No;16
+3/10/19 12:59;Male;52;Employed;Drive-thru;24;0.5;Coffee;Yes;17
+3/10/19 01:08;Male;69;Employed;Dine in;8;0.6;Coffee;Yes;18
+3/10/19 01:09;Male;19;Employed;Take away;39;3.3;Coffee;Yes;19
+3/10/19 01:13;Female;42;Self_employed;Take away;9;1.1;Cold drinks;Yes;20
+3/10/19 01:13;Male;50;Employed;Take away;13;0.4;Coffee;No;21
+3/10/19 01:14;Female;29;Employed;Dine in;15;3.4;Coffee;Yes;22
+3/10/19 01:21;Male;23;Employed;Dine in;32;2.8;Coffee;No;23
+3/10/19 01:24;Female;18;Student;Drive-thru;16;0.1;Cold drinks,Pastries,Sandwiches;Yes;24
+4/10/19 01:24;Male;43;Self_employed;Dine in;27;5.0;Coffee,Juices,Pastries,Sandwiches;Yes;25
+4/10/19 01:25;Male;34;Employed;Dine in;24;4.3;Coffee,Cold drinks;Yes;26
+4/10/19 01:29;Male;27;Employed;Drive-thru;7;2.8;Coffee;No;27
+4/10/19 01:33;Male;19;Self_employed;Take away;6;4.1;Coffee;Yes;28
+4/10/19 01:34;Male;21;Self_employed;Drive-thru;18;1.2;Coffee;Yes;29
+4/10/19 01:37;Female;20;Employed;Dine in;6;1.7;Coffee;Yes;30
+7/10/19 01:39;Female;45;Employed;Take away;7;2.5;Coffee,Pastries,Sandwiches;Yes;31
+7/10/19 01:40;Female;25;Employed;Drive-thru;18;0.5;Coffee,Pastries;Yes;32
+7/10/19 01:45;Female;43;Employed;Take away;19;3.7;Coffee;Yes;33
+7/10/19 01:45;Female;28;Employed;Dine in;19;3.2;Coffee;No;34
+7/10/19 01:51;Female;21;Employed;Take away;30;4.4;Coffee;Yes;35
+7/10/19 01:51;Female;15;Student;Take away;2;0.3;Coffee;No;36
+7/10/19 01:53;Female;55;Self_employed;Take away;12;3.0;Cold drinks;Yes;37
+8/10/19 01:55;Male;5;Student;Dine in;38;3.4;Coffee;Yes;38
+8/10/19 01:57;Male;20;Employed;Take away;33;2.1;Cold drinks,Juices,Pastries;Yes;39
+8/10/19 02:00;Male;19;Employed;Take away;3;0.6;Coffee;Yes;40
+8/10/19 02:03;Female;61;Employed;Take away;19;1.2;Coffee;Yes;41
+8/10/19 02:06;Male;34;Employed;Dine in;14;0.8;Coffee;Yes;42
+8/10/19 02:27;Female;27;Employed;Dine in;4;4.1;Coffee;Yes;43
+8/10/19 02:35;Female;58;Employed;Take away;15;4.8;Coffee,Pastries;Yes;44
+9/10/19 02:41;Female;14;Student;never;37;1.4;Coffee;Yes;45
+9/10/19 02:41;Female;18;Student;Take away;40;1.8;Coffee,Pastries;Yes;46
+9/10/19 02:41;Female;27;Student;Dine in;6;0.5;Cold drinks;Yes;47
+9/10/19 02:42;Female;23;Self_employed;Take away;20;3.2;Coffee;Yes;48
+9/10/19 02:45;Female;18;Employed;Take away;5;2.3;Cold drinks;Yes;49

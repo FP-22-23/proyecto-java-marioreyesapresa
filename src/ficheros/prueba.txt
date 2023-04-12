@@ -1,0 +1,4 @@
+fechaHora;genero;edad;ocupacion;servicio;duracion;valoracion;pedido;conocidoPor;satisfecho;idCliente
+1/10/19 12:38;Female;23;Student;Dine in;35;0.5;Coffee;"Starbucks Website/Apps,Social Media,Emails,Deal sites (fave, iprice, etc...)";Yes;1
+1/10/19 12:38;Female;19;Student;Take away;5;4.1;"Cold drinks,Pastries";"Social Media;In Store displays";Yes;2
+1/10/19 12:38;Male;26;Employed;Dine in;6;0.7;Coffee;"In Store displays,Billboards";Yes;3

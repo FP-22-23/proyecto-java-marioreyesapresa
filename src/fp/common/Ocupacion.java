@@ -1,5 +1,5 @@
 package fp.common;
 
 public enum Ocupacion {
-	Student,Employed,Self_employed
+	STUDENT,EMPLOYED,SELF_EMPLOYED
 }
