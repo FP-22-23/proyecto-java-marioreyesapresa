@@ -22,6 +22,35 @@ import fp.common.Ocupacion;
  */
 
 public class FactoriaStarbucks {
+	
+	/**
+	 * @param rutaFichero Nombre del fichero con datos de starbucks.
+	 * Devuelve una lista de objetos de tipo Starbucks con los datos del fichero.
+	 */
+	 public static List<Starbucks> leeListaStarbucks(String rutaFichero){
+		 
+		 // 1. Crear una List<Starbucks> vacía para añadir los datos
+		List<Starbucks> res=new ArrayList<Starbucks>();
+		
+		try {
+			// 2. Leer los datos y guardarlos en una List<Starbucks>
+			
+			List<String> lineas = Files.readAllLines(Paths.get(rutaFichero));
+			
+			for(String linea:lineas.subList(1, lineas.size())) {
+				
+				res.add(parsearStarbucks(linea));
+				
+			}
+			
+		}catch(IOException e) {
+			
+			e.printStackTrace();
+			
+		}
+		return res;
+	 }
+	
 
 
 

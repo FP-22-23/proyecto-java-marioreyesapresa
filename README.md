@@ -14,7 +14,7 @@ Autor/a: Mario Reyes Apresa   uvus:marreyapr
     
 ## Estructura del *dataset*
 
-El dataset original Starbucks Customer Survey se puede obtener de la URL [https://www.kaggle.com/datasets/malaynarashid/starbucks-customer-survey]. Originalmente tiene 21 columnas y cada fila contiene datos sobre una encuesta a clientes del establecimeinto. El dataset usado en este proyecto tiene 11 columna, 10 se han tomado del dataset original, y una, el id del cliente, se ha generado de forma aleatoria. A continuación se describen las 11 columnas del dataset:
+El dataset original Starbucks Customer Survey se puede obtener de la URL [https://www.kaggle.com/datasets/malaynarashid/starbucks-customer-survey]. Originalmente tiene 21 columnas y cada fila contiene datos sobre una encuesta a clientes del establecimeinto. El dataset usado en este proyecto tiene 10 columna, 9 se han tomado del dataset original, y una, el id del cliente, se ha generado de forma aleatoria. A continuación se describen las 10 columnas del dataset:
 
 * **fechaHora**: de tipo LocalDateTime,  indica la fecha y hora en la que se realizó el pedido.
 * **genero**: de tipo Enum, indica el tipo de Genero del cliente.
@@ -24,7 +24,6 @@ El dataset original Starbucks Customer Survey se puede obtener de la URL [https:
 * **duracion**: de tipo Integer, contiene la duración en minutos del pedido
 * **valoracion**: de tipo Double, tiene la puntuación del pedido que ha dado cada cliente.
 * **pedido**: de tipo List<String>, contiene una lista con los articulos pedidos. Los pedidos están separados por ;.
-* **conocidoPor**: de tipo cadena, indica la forma en la que el cliente conoció el establecimiento.
 * **satisfecho**: de tipo Boolean. Indica si el cliente quedó satisfecho con el pedido.
 * **idCliente**: de tipo entero. Indica el id del cliente que realiza el pedido.
 
@@ -44,7 +43,7 @@ Representa un pedido en Starbucks.
 - _duracion_, de tipo _Integer_, consultable y modificable. Contiene el timepo en minutos que tarda en prepararse el pedido.
 - _valoracion_, de tipo _Double_, consultable y modificable. Contiene el rating del pedido.
 - _pedido_, de tipo _List\<String\>_, consultable y modificable. Lista de pedido.
-- _conocidoPor_, de tipo _String_, consultable y modificable. Indica como se ha conocido el establecimiento.
+
 - _satisfecho_, de tipo _Boolean_, consultable y modificable. Indica si el cliente está satisfecho o no(false).
 - _idCliente_, de tipo _Integer_, consultable y modificable. Es el identificador del cliente.
 - _pedidoCliente_, de tipo _String_, propiedad derivada. Indica el pedido que ha realizado un cliente con determinado id.
@@ -62,7 +61,7 @@ Representa un pedido en Starbucks.
 - R3:La valoracion debe tener valores comprendidos entre 0.0 y 5.0
 
 
-***Criterio de igualdad**: Dos pedidos son iguales si todas sus propiedades básicas son iguales.
+**Criterio de igualdad**: Dos pedidos son iguales si todas sus propiedades básicas son iguales.
 
 **Criterio de ordenación**: el pedido con mayor valoracion es mejor.
 
@@ -74,3 +73,49 @@ Representa un pedido en Starbucks.
 - Ocupacion, enumerado. Puede tomar los valores Student, Employed, Self_Employed.
 * **fp.common**:
 - Cliente: Record que actua como tipo auxiliar, contiene un metodo getAñoNacimiento() que nos permite calcular el año de nacimiento del cliente a partir de la fecha del pedido y de la edad del cliente.
+
+### Factoría - FactoriaStarbucks
+Clase de factoría para construir objetos de tipo Starbucks.
+
+- _leerStarbucks(String rutaFichero)_:Crea un objeto de tipo Starbucks a partir de la información recogida en el archivo csv, cuya ruta se da como parámetro.
+
+- _parsearStarbucks(String linea)_: Recibe como argumento una linea del fichero del tipo String y parsea cada propiedad con su tipo correspondiente.
+
+### Tipo Contenedor - ListaStarbucks
+
+Clase contenedora de los objetos de tipo Starbucks.
+
+**Propiedades**:
+
+-  _orders_, de tipo _String_, consultable y modificable. 
+-  _listas_, de tipo _List<Starbucks>_, consultable. 
+ 
+**Constructores**: 
+
+- C1:Constructor con todas las propiedades básicas (excepto la colección), que cree un objeto de tipo contenedor sin ningún elemento en la colección.
+- C2: Constructor con todas las propiedades básicas y una colección de objetos del tipo base, que cree un objeto de tipo contenedor con todos los elementos de la colección.
+
+
+**Criterio de igualdad**: Dos Pedidos de Starbucks son iguales si lo son sus propiedades.
+
+**Criterio de ordenación**: idéntico al orden natural del tipo base.
+
+**ToString**: describe el tipo ListaStarbucks
+
+
+**Otras operaciones**:
+- _void añade(Starbucks s)_: Añade un pedido Starbucks al objeto.
+- _void eliminarPrimera(Starbucks b) y void eliminarUltima(Starbucks 	b)_: Elimina un elemento del objeto.
+- _Integer getLongitud()_: Devuelve la longitud de la lista
+- _Boolean existeOrders(Starbucks a)_: Devuelve si existe un pedido.
+
+
+**Métodos con bucles tradicionales**:
+
+-_Integer numeroDePedidos(Integer mes)_: devuelve un Integer con la cantidad de pedidos realizados en el mes que recibe como parámetro.
+
+-_List<Starbucks> filtroPorEdad(Integer edad )_: Filtramos por la edad dada como parámetro y devuelve una lista con los pedidos realizados por clientes con la edad recibida.
+
+-_Map<String, List<Starbucks>> agruparPorOcupacion()_: Map<String, List< Starbucks >> donde asocia a cada Ocupacion sus objetos Starbucks asociados en una lista.
+
+-_Map<String, Integer> conteoDeServicio()_: Map<String, Integer> donde asocia a cada Servicio el conteo de las veces que aparece.
