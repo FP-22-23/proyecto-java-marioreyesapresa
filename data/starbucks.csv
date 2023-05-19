@@ -28,9 +28,9 @@ fechaHora;genero;edad;ocupacion;servicio;duracion;valoracion;pedido;satisfecho;i
 4/10/19 01:29;Male;27;Employed;Drive-thru;7;2.8;Coffee;No;27
 4/10/19 01:33;Male;19;Self_employed;Take away;6;4.1;Coffee;Yes;28
 4/10/19 01:34;Male;21;Self_employed;Drive-thru;18;1.2;Coffee;Yes;29
-4/10/19 01:37;Female;20;Employed;Dine in;6;1.7;Coffee;Yes;30
-7/10/19 01:39;Female;45;Employed;Take away;7;2.5;Coffee,Pastries,Sandwiches;Yes;31
-7/10/19 01:40;Female;25;Employed;Drive-thru;18;0.5;Coffee,Pastries;Yes;32
+4/04/19 01:37;Female;20;Employed;Dine in;6;1.7;Coffee;Yes;30
+7/03/19 01:39;Female;45;Employed;Take away;7;2.5;Coffee,Pastries,Sandwiches;Yes;31
+7/12/19 01:40;Female;25;Employed;Drive-thru;18;0.5;Coffee,Pastries;Yes;32
 7/10/19 01:45;Female;43;Employed;Take away;19;3.7;Coffee;Yes;33
 7/10/19 01:45;Female;28;Employed;Dine in;19;3.2;Coffee;No;34
 7/10/19 01:51;Female;21;Employed;Take away;30;4.4;Coffee;Yes;35
@@ -40,10 +40,10 @@ fechaHora;genero;edad;ocupacion;servicio;duracion;valoracion;pedido;satisfecho;i
 8/10/19 01:57;Male;20;Employed;Take away;33;2.1;Cold drinks,Juices,Pastries;Yes;39
 8/10/19 02:00;Male;19;Employed;Take away;3;0.6;Coffee;Yes;40
 8/10/19 02:03;Female;61;Employed;Take away;19;1.2;Coffee;Yes;41
-8/10/19 02:06;Male;34;Employed;Dine in;14;0.8;Coffee;Yes;42
-8/10/19 02:27;Female;27;Employed;Dine in;4;4.1;Coffee;Yes;43
+8/01/19 02:06;Male;34;Employed;Dine in;14;0.8;Coffee;Yes;42
+8/11/19 02:27;Female;27;Employed;Dine in;4;4.1;Coffee;Yes;43
 8/10/19 02:35;Female;58;Employed;Take away;15;4.8;Coffee,Pastries;Yes;44
-9/10/19 02:41;Female;14;Student;never;37;1.4;Coffee;Yes;45
+9/10/19 02:41;Female;14;Student;Take away;37;1.4;Coffee;Yes;45
 9/10/19 02:41;Female;18;Student;Take away;40;1.8;Coffee,Pastries;Yes;46
 9/10/19 02:41;Female;27;Student;Dine in;6;0.5;Cold drinks;Yes;47
 9/10/19 02:42;Female;23;Self_employed;Take away;20;3.2;Coffee;Yes;48

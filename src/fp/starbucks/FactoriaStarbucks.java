@@ -9,7 +9,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
-
+import java.util.stream.Stream;
 
 import fp.common.Genero;
 import fp.common.Ocupacion;
@@ -19,13 +19,13 @@ import fp.common.Ocupacion;
 /**
  * @author marreyapr
  *
- */
+ */ 
 
 public class FactoriaStarbucks {
 	
 	/**
 	 * @param rutaFichero Nombre del fichero con datos de starbucks.
-	 * Devuelve una lista de objetos de tipo Starbucks con los datos del fichero.
+	 * Devuelve una LISTA de objetos de tipo Starbucks con los datos del fichero.
 	 */
 	 public static List<Starbucks> leeListaStarbucks(String rutaFichero){
 		 
@@ -57,10 +57,9 @@ public class FactoriaStarbucks {
 
 	/**
 	 * @param rutaFichero Nombre del fichero con datos de starbucks.
-	 * Devuelve un objeto de tipo Starbucks con los datos del fichero.
+	 * Devuelve un OBJETO de tipo Starbucks con los datos del fichero.
 	 */
 	public static ListaStarbucks leerStarbucks(String rutaFichero) {
-		// 1. Leer los datos y guardarlos en un Stream<Starbucks>
 		ListaStarbucks res=null;
 		try {
 			List<Starbucks> lineas=
@@ -68,8 +67,7 @@ public class FactoriaStarbucks {
 					.skip(1)
 					.map(FactoriaStarbucks::parsearStarbucks)
 					.collect(Collectors.toList());
-			// 2. Crear un objeto de tipo Starbucks mediante el constructor a partir de Stream<Starbucks>
-			res = new ListaStarbucks("Starbucks",lineas);
+			res = new ListaStarbucks(lineas);
 		}catch(IOException e) {
 			System.out.println("No se ha encontrado el fichero" + rutaFichero);
 			e.printStackTrace();
@@ -77,6 +75,8 @@ public class FactoriaStarbucks {
 		return res;
 
 	}
+	
+	
 	
 private static Starbucks parsearStarbucks(String linea) {
 		String[] trozos=linea.split(";");
@@ -118,4 +118,35 @@ private static Starbucks parsearStarbucks(String linea) {
 		}
 		return res;
 	}
+	
+	
+//ENTREGA 3
+	// método que recibe como parámetro una cadena que contiene el nombre y 
+		//ruta del fichero CSV, y devuelve un objeto del tipo contenedor creado mediante el constructor anterior.
+		
+		/**
+		 * @param rutaFichero Nombre del fichero con datos starbucks
+		 * devuelve un OBJETO del tipo contenedor creado mediante el constructor 
+		 */
+		public static ListaStarbucks leerStarbucks2(String rutaFichero) {
+			ListaStarbucks res = null;
+			try {
+				// 1. Leer los datos y guardarlos en un Stream<Starbucks>
+				Stream<Starbucks> s =
+						Files.lines(Paths.get(rutaFichero))
+						.skip(1)
+						.map(FactoriaStarbucks::parsearStarbucks);
+				// 2. Crear un objeto de tipo Starbucks mediante el constructor a partir de Stream<Starbucks>
+				res = new ListaStarbucks(s);
+			} 
+			catch(IOException e) {
+				System.out.println("No se ha encontrado el fichero." + rutaFichero);
+			}
+			
+			return res;
+		}
+	
+	
+	
+	
 }

@@ -79,7 +79,11 @@ Clase de factoría para construir objetos de tipo Starbucks.
 
 - _leerStarbucks(String rutaFichero)_:Crea un objeto de tipo Starbucks a partir de la información recogida en el archivo csv, cuya ruta se da como parámetro.
 
+- _leeListaStarbucks(String rutaFichero)_:Crea una lista de objeto de tipo Starbucks a partir de la información recogida en el archivo csv, cuya ruta se da como parámetro.
+
 - _parsearStarbucks(String linea)_: Recibe como argumento una linea del fichero del tipo String y parsea cada propiedad con su tipo correspondiente.
+
+- _leerStarbucks2(String rutaFichero)_:Crea un objeto de tipo Starbucks a partir del constructor del contenedor. Usa la información recogida en el archivo csv, cuya ruta se da como parámetro.
 
 ### Tipo Contenedor - ListaStarbucks
 
@@ -87,13 +91,14 @@ Clase contenedora de los objetos de tipo Starbucks.
 
 **Propiedades**:
 
--  _orders_, de tipo _String_, consultable y modificable. 
 -  _listas_, de tipo _List<Starbucks>_, consultable. 
  
 **Constructores**: 
 
 - C1:Constructor con todas las propiedades básicas (excepto la colección), que cree un objeto de tipo contenedor sin ningún elemento en la colección.
 - C2: Constructor con todas las propiedades básicas y una colección de objetos del tipo base, que cree un objeto de tipo contenedor con todos los elementos de la colección.
+- C3: constructor con todas las propiedades básicas (excepto la colección) y un stream de objetos del tipo base, que cree un objeto del tipo contenedor contodos los elementos del stream.
+	
 
 
 **Criterio de igualdad**: Dos Pedidos de Starbucks son iguales si lo son sus propiedades.
@@ -105,17 +110,39 @@ Clase contenedora de los objetos de tipo Starbucks.
 
 **Otras operaciones**:
 - _void añade(Starbucks s)_: Añade un pedido Starbucks al objeto.
-- _void eliminarPrimera(Starbucks b) y void eliminarUltima(Starbucks 	b)_: Elimina un elemento del objeto.
+- _void eliminarPedido(Starbucks b)_: Elimina un elemento del objeto.
 - _Integer getLongitud()_: Devuelve la longitud de la lista
-- _Boolean existeOrders(Starbucks a)_: Devuelve si existe un pedido.
 
 
 **Métodos con bucles tradicionales**:
 
--_Integer numeroDePedidos(Integer mes)_: devuelve un Integer con la cantidad de pedidos realizados en el mes que recibe como parámetro.
+- _Boolean existePedidoDadoId(Integer id)_: Devuelve si existe un pedido con un id determinado.
+
+-_Integer numeroDePedidosMes(Integer mes)_: devuelve un Integer con la cantidad de pedidos realizados en el mes que recibe como parámetro.
 
 -_List<Starbucks> filtroPorEdad(Integer edad )_: Filtramos por la edad dada como parámetro y devuelve una lista con los pedidos realizados por clientes con la edad recibida.
 
 -_Map<String, List<Starbucks>> agruparPorOcupacion()_: Map<String, List< Starbucks >> donde asocia a cada Ocupacion sus objetos Starbucks asociados en una lista.
 
 -_Map<String, Integer> conteoDeServicio()_: Map<String, Integer> donde asocia a cada Servicio el conteo de las veces que aparece.
+
+**Métodos con stream**:
+- _Boolean existePedidoDadoIdStream(Integer id)_: Devuelve si existe un pedido con un id determinado.
+
+-_Integer numeroDePedidosMesStream(Integer mes)_: devuelve un Integer con la cantidad de pedidos realizados en el mes que recibe como parámetro.
+
+-_List<Starbucks> filtroPorEdadStream(Integer edad )_: Filtramos por la edad dada como parámetro y devuelve una lista con los pedidos realizados por clientes con la edad recibida.
+
+-_Starbucks pedidoMayorValoracion(Genero genero)_: Devuelve el pedido con mayor valoracion hecho por un genero dado como parametro.
+
+-_List<Starbucks> pedidosSatisfechosValoracion()_:Devuelve los pedidos satisfechos ordenados por mejor valoracion
+
+-_Map<String, List<Starbucks>> agruparPorOcupacionStream()_:Map donde asocia a cada ocupacion sus objetos Starbucks asociados en una lista
+
+-_Map<String, List<Integer>> agruparPorPedidoId()_:Map donde asocia a cada mes el id del cliente que ha realizado un pedido.
+
+-_Map<List<String> , Double> pedidosPeoresValoraciones(Integer dia)_:Map donde las claves son los diferentes pedidos y los valores son las valoraciones mínimas de los elementos con ese pedido y cuya fecha y hora tienen el mismo día que el valor del parámetro
+
+-_SortedMap<Genero, List<Starbucks>> obtenerNPedidosMenorDuracionPorGenero(Integer n)_:SortedMap donde las claves son los generos y los valores los n pedidos con menor duracion 
+	
+-_Ocupacion getOcupacionMayorEdad()_:Crea un Map donde las claves son las ocupaciones y los valores las edades y devuelve la ocupacion(clave) con mayor edad(valor)
